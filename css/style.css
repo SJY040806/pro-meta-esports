@@ -397,27 +397,16 @@ a {
 }
 
 .about-visual {
-    min-height: 380px;
-    background: linear-gradient(135deg,
-            var(--primary),
-            var(--secondary));
+    height: 380px;
     border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     overflow: hidden;
 }
 
-.about-visual::before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.35;
+.about-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-icon {
