@@ -1,0 +1,103 @@
+/* ===========================
+Hero
+=========================== */
+
+.achievement-hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(rgba(3, 4, 94, .75), rgba(2, 62, 138, .75)),
+        url("../assets/images/achievement-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+
+    color: white;
+
+}
+
+header p {
+
+    color: white;
+
+}
+
+#club-achievements .card {
+
+    min-height: 220px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+/* ===========================
+Spotlight
+=========================== */
+
+#spotlight img {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+/* ===========================
+Player Table
+=========================== */
+
+.table-scroll {
+
+    max-height: 600px;
+
+    overflow-y: auto;
+
+}
+
+.table-dark {
+
+    background: #03045E;
+
+}
+
+.table tbody tr:hover {
+
+    background: var(--background);
+
+}
+
+.table {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+.table td {
+
+    vertical-align: middle;
+
+}
+
+/* ===========================
+Summary
+=========================== */
+
+.table-primary {
+
+    background: var(--light-cyan);
+
+}

@@ -1,0 +1,79 @@
+/* ===========================
+Hero
+=========================== */
+
+.membership-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(rgba(3, 4, 94, .75), rgba(2, 62, 138, .75)),
+        url("../assets/images/membership-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
+
+header p {
+
+    color: white;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+/* ===========================
+Benefits
+=========================== */
+
+.card h5 {
+
+    margin-top: 15px;
+
+}
+
+/* ===========================
+Registration
+=========================== */
+
+#join {
+
+    background: white;
+
+}
+
+#join .card {
+
+    border-radius: 20px;
+
+}
+
+.form-control,
+.form-select {
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color: var(--cyan);
+
+    box-shadow: none;
+
+}
