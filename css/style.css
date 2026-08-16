@@ -12,8 +12,8 @@
     --text-light: #FFFFFF;
 
     /* UI */
-    --border-radius: 12px;
-    --button-radius: 8px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
 
     /* Spacing */
     --space-sm: 8px;
@@ -55,7 +55,7 @@ h6 {
     color: var(--accent-light);
 }
 
-.nav-link {
+.navbar .nav-link {
     color: var(--text-light);
     font-weight: 500;
     margin-left: 8px;
@@ -66,494 +66,11 @@ h6 {
     color: var(--accent-light);
 }
 
-.nav-link.active {
+.navbar .nav-link.active {
     color: var(--accent-light);
-}
-
-/* =========================
-   HERO SECTION
-   ========================= */
-
-.hero-section {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg,
-            var(--primary),
-            var(--deep-blue));
-    color: var(--text-light);
-    padding: 80px 0;
-    overflow: hidden;
-}
-
-.hero-label {
-    color: var(--accent-light);
-    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
 }
 
-.hero-title {
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
-
-.hero-title span {
-    color: var(--accent);
-}
-
-.hero-description {
-    max-width: 600px;
-    font-size: 17px;
-    line-height: 1.8;
-    color: #CAF0F8;
-    margin-bottom: 32px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.btn-primary-custom {
-    background-color: var(--accent);
-    color: var(--primary);
-    border: 2px solid var(--accent);
-    border-radius: var(--button-radius);
-    padding: 12px 24px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-primary-custom:hover {
-    background-color: var(--accent-light);
-    border-color: var(--accent-light);
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.btn-outline-custom {
-    background-color: transparent;
-    color: var(--text-light);
-    border: 2px solid var(--accent);
-    border-radius: var(--button-radius);
-    padding: 12px 24px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-custom:hover {
-    background-color: var(--accent);
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.hero-visual {
-    position: relative;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-glow {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.25;
-}
-
-.hero-controller {
-    position: relative;
-    z-index: 1;
-    font-size: 150px;
-    filter: drop-shadow(0 0 30px rgba(0, 180, 216, 0.5));
-}
-
-/* =========================
-   ABOUT PREVIEW
-   ========================= */
-
-.about-preview {
-    padding: 100px 0;
-    background-color: #ffffff;
-}
-
-.section-label {
-    color: var(--secondary);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-}
-
-.section-title {
-    color: var(--primary);
-    font-size: clamp(30px, 4vw, 44px);
-    font-weight: 700;
-    margin-bottom: 24px;
-}
-
-.section-description {
-    color: #444;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 16px;
-}
-
-.about-visual {
-    min-height: 380px;
-    background: linear-gradient(135deg,
-            var(--primary),
-            var(--secondary));
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.about-visual::before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.35;
-}
-
-.about-icon {
-    position: relative;
-    z-index: 1;
-    font-size: 120px;
-}
-
-.btn-secondary-custom {
-    background-color: var(--primary);
-    color: var(--text-light);
-    border: 2px solid var(--primary);
-    border-radius: var(--button-radius);
-    padding: 12px 24px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-secondary-custom:hover {
-    background-color: var(--secondary);
-    border-color: var(--secondary);
-    color: var(--text-light);
-    transform: translateY(-2px);
-}
-
-/* =========================
-   FEATURED GAMES
-   ========================= */
-
-.games-section {
-    padding: 100px 0;
-    background-color: var(--background-light);
-}
-
-.section-heading {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.game-card {
-    height: 100%;
-    background-color: #ffffff;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.game-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(3, 4, 94, 0.15);
-}
-
-.game-image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-}
-
-.game-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.game-card:hover .game-image img {
-    transform: scale(1.05);
-}
-
-.game-content {
-    padding: 24px;
-}
-
-.game-category {
-    display: inline-block;
-    color: var(--secondary);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.game-content h3 {
-    color: var(--primary);
-    font-size: 24px;
-    margin-bottom: 12px;
-}
-
-.game-content p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.game-link {
-    color: var(--secondary);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.game-link:hover {
-    color: var(--accent);
-}
-
-/* =========================
-   UPCOMING TOURNAMENTS
-   ========================= */
-
-.tournaments-section {
-    padding: 100px 0;
-    background-color: #ffffff;
-}
-
-.tournament-card {
-    height: 100%;
-    border: 1px solid rgba(3, 4, 94, 0.1);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tournament-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(3, 4, 94, 0.12);
-}
-
-.tournament-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
-    background-color: var(--primary);
-}
-
-.tournament-game {
-    color: var(--accent-light);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.tournament-status {
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: var(--accent);
-    color: var(--primary);
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.tournament-content {
-    padding: 24px;
-}
-
-.tournament-content h3 {
-    color: var(--primary);
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.tournament-info {
-    margin-bottom: 24px;
-}
-
-.tournament-info p {
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.btn-tournament {
-    width: 100%;
-    background-color: var(--secondary);
-    color: var(--text-light);
-    border: none;
-    border-radius: var(--button-radius);
-    padding: 11px 20px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-tournament:hover {
-    background-color: var(--primary);
-    color: var(--text-light);
-}
-
-/* =========================
-   ACHIEVEMENTS
-   ========================= */
-
-.achievements-section {
-    padding: 100px 0;
-    background-color: var(--background-light);
-}
-
-.achievement-card {
-    height: 100%;
-    padding: 28px;
-    background-color: #ffffff;
-    border-radius: var(--radius-md);
-    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.07);
-    border-left: 4px solid var(--accent);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.achievement-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(3, 4, 94, 0.12);
-}
-
-.achievement-icon {
-    font-size: 36px;
-    margin-bottom: 18px;
-}
-
-.achievement-year {
-    display: block;
-    color: var(--secondary);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
-}
-
-.achievement-card h3 {
-    color: var(--primary);
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.achievement-card p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-/* =========================
-   MEMBERSHIP CTA
-   ========================= */
-
-.membership-cta {
-    padding: 100px 0;
-    background: linear-gradient(135deg,
-            var(--primary),
-            var(--secondary));
-    position: relative;
-    overflow: hidden;
-}
-
-.membership-cta::before {
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.2;
-    top: -150px;
-    right: -100px;
-}
-
-.membership-cta::after {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: var(--accent-light);
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.15;
-    bottom: -150px;
-    left: -100px;
-}
-
-.membership-cta-content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.membership-cta .section-label {
-    color: var(--accent-light);
-}
-
-.membership-cta h2 {
-    color: #ffffff;
-    font-family: "Lora", serif;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.membership-cta p:not(.section-label) {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.btn-cta {
-    background-color: #ffffff;
-    color: var(--primary);
-    border: 2px solid #ffffff;
-    border-radius: var(--button-radius);
-    padding: 13px 28px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-.btn-cta:hover {
-    background-color: var(--accent-light);
-    border-color: var(--accent-light);
-    color: var(--primary);
-    transform: translateY(-3px);
-}
 
 /* =========================
    FOOTER
@@ -668,6 +185,818 @@ h6 {
 .footer-social a:hover {
     color: var(--accent-light);
 }
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--deep-blue));
+    color: var(--text-light);
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero-label {
+    color: var(--accent-light);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-title span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #CAF0F8;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-custom {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent-light);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.25;
+}
+
+.hero-controller {
+    position: relative;
+    z-index: 1;
+    font-size: 150px;
+    filter: drop-shadow(0 0 30px rgba(0, 180, 216, 0.5));
+}
+
+/* About Preview */
+
+.about-preview {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.section-label {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.section-description {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-visual {
+    min-height: 380px;
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-visual::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+}
+
+.about-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 120px;
+}
+
+.btn-secondary-custom {
+    background-color: var(--primary);
+    color: var(--text-light);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* Featured Games */
+
+.games-section {
+    padding: 100px 0;
+    background-color: var(--background-light);
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.game-card {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(3, 4, 94, 0.15);
+}
+
+.game-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.05);
+}
+
+.game-content {
+    padding: 24px;
+}
+
+.game-category {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.game-content h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.game-content p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.game-link {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.game-link:hover {
+    color: var(--accent);
+}
+
+/* Upcoming Tournaments */
+
+.tournaments-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.tournament-card {
+    height: 100%;
+    border: 1px solid rgba(3, 4, 94, 0.1);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tournament-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(3, 4, 94, 0.12);
+}
+
+.tournament-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: var(--primary);
+}
+
+.tournament-game {
+    color: var(--accent-light);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tournament-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: var(--accent);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.tournament-content {
+    padding: 24px;
+}
+
+.tournament-content h3 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.tournament-info {
+    margin-bottom: 24px;
+}
+
+.tournament-info p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.btn-tournament {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 11px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-tournament:hover {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+/* Achievements */
+
+.achievements-section {
+    padding: 100px 0;
+    background-color: var(--background-light);
+}
+
+.achievement-card {
+    height: 100%;
+    padding: 28px;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.07);
+    border-left: 4px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(3, 4, 94, 0.12);
+}
+
+.achievement-icon {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.achievement-year {
+    display: block;
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.achievement-card h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Membership CTA */
+
+.membership-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+    position: relative;
+    overflow: hidden;
+}
+
+.membership-cta::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    top: -150px;
+    right: -100px;
+}
+
+.membership-cta::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--accent-light);
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    bottom: -150px;
+    left: -100px;
+}
+
+.membership-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.membership-cta .section-label {
+    color: var(--accent-light);
+}
+
+.membership-cta h2 {
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.membership-cta p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: #ffffff;
+    color: var(--primary);
+    border: 2px solid #ffffff;
+    border-radius: var(--radius-sm);
+    padding: 13px 28px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent-light);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ABOUT PAGE
+   ========================= */
+
+
+/* About Hero */
+
+.about-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(rgba(3, 4, 94, 0.92),
+            rgba(0, 119, 182, 0.88));
+    padding: 100px 0;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero .section-label {
+    color: var(--accent-light);
+}
+
+.about-hero h1 {
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.about-hero p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* Who We Are */
+
+.who-we-are {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.about-brand-visual {
+    min-height: 380px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-brand-visual::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.25;
+}
+
+.about-brand-visual span,
+.about-brand-visual strong {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-family: "Lora", serif;
+}
+
+.about-brand-visual span {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.about-brand-visual strong {
+    font-size: 48px;
+    color: var(--accent-light);
+}
+
+
+/* Mission & Vision */
+
+.mission-section {
+    padding: 100px 0;
+    background-color: var(--background-light);
+}
+
+.purpose-card {
+    height: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.07);
+    border-top: 4px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purpose-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(3, 4, 94, 0.12);
+}
+
+.purpose-icon {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.purpose-card h3 {
+    color: var(--primary);
+    font-family: "Lora", serif;
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.purpose-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* What We Offer */
+
+.offer-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.offer-card {
+    height: 100%;
+    padding: 32px 28px;
+    background-color: #ffffff;
+    border: 1px solid rgba(3, 4, 94, 0.08);
+    border-radius: var(--radius-md);
+    box-shadow: 0 6px 20px rgba(3, 4, 94, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(3, 4, 94, 0.1);
+}
+
+.offer-icon {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.offer-card h3 {
+    color: var(--primary);
+    font-family: "Lora", serif;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.offer-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.offer-card a {
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.offer-card a:hover {
+    color: var(--accent);
+}
+
+/* Our Games */
+
+.games-section {
+    padding: 100px 0;
+    background-color: var(--background-light);
+}
+
+.game-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 25px rgba(3, 4, 94, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(3, 4, 94, 0.14);
+}
+
+.game-card-image {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(3, 4, 94, 0.8),
+            rgba(0, 180, 216, 0.5));
+}
+
+.game-card-image span {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.valorant-bg {
+    background-color: #03045E;
+}
+
+.ml-bg {
+    background-color: #0077B6;
+}
+
+.cs-bg {
+    background-color: #023E8A;
+}
+
+.game-card-content {
+    padding: 28px;
+}
+
+.game-card-content h3 {
+    color: var(--primary);
+    font-family: "Lora", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.game-card-content p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* About CTA */
+
+.about-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+    position: relative;
+    overflow: hidden;
+}
+
+.about-cta::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.2;
+    top: -180px;
+    right: -100px;
+}
+
+.about-cta::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--accent-light);
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    bottom: -170px;
+    left: -100px;
+}
+
+.about-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-cta .section-label {
+    color: var(--accent-light);
+}
+
+.about-cta h2 {
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-cta p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
 
 @media (max-width: 991px) {
 
