@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL VARIABLES
+   ========================= */
+
 :root {
     /* Brand Colours */
     --primary: #03045E;
@@ -5,11 +9,14 @@
     --deep-blue: #023E8A;
     --accent: #00B4D8;
     --accent-light: #48CAE4;
+
+    /* Background */
     --background-light: #CAF0F8;
 
     /* Text */
-    --text-dark: #03045E;
+    --text-dark: #1F2937;
     --text-light: #FFFFFF;
+    --text-muted: #555555;
 
     /* UI */
     --radius-md: 12px;
@@ -19,12 +26,27 @@
     --space-sm: 8px;
     --space-md: 16px;
     --space-lg: 32px;
+    --section-padding: 100px;
+
+    /* Animation */
+    --transition: 0.3s ease;
+}
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.6;
 }
 
 h1,
@@ -34,6 +56,48 @@ h4,
 h5,
 h6 {
     font-family: "Lora", serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    transition: var(--transition);
+}
+
+/* =========================
+   SHARED SECTION STYLES
+   ========================= */
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-label {
+    color: var(--secondary);
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    color: var(--primary);
+    font-family: "Lora", serif;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: var(--text-muted);
+    max-width: 650px;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 /* =========================
