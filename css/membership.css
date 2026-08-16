@@ -1,5 +1,5 @@
 /* ===========================
-Hero
+   Hero
 =========================== */
 
 .membership-hero {
@@ -16,64 +16,45 @@ Hero
     background-position: center;
 }
 
-header h1 {
-
-    color: white;
-
+.membership-hero h1 {
+    color: var(--text-light);
     margin-bottom: 20px;
-
 }
 
-header p {
-
-    color: white;
-
+.membership-hero p {
+    color: var(--text-light);
     max-width: 700px;
-
     margin: auto;
-
 }
 
 /* ===========================
-Benefits
+   Benefits
 =========================== */
 
 .card h5 {
-
     margin-top: 15px;
-
 }
 
 /* ===========================
-Registration
+   Registration
 =========================== */
 
 #join {
-
-    background: white;
-
+    background: #ffffff;
 }
 
 #join .card {
-
     border-radius: 20px;
-
 }
 
 .form-control,
 .form-select {
-
-    border-radius: 8px;
-
+    border-radius: var(--radius-sm);
     padding: 12px;
-
 }
 
 .form-control:focus,
 .form-select:focus {
-
-    border-color: var(--cyan);
-
+    border-color: var(--accent);
     box-shadow: none;
-
 }

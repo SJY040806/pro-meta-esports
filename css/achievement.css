@@ -1,5 +1,5 @@
 /* ===========================
-Hero
+   Hero
 =========================== */
 
 .achievement-hero {
@@ -16,88 +16,61 @@ Hero
     background-position: center;
 }
 
-header h1 {
-
-    color: white;
-
+.achievement-hero h1 {
+    color: var(--text-light);
 }
 
-header p {
-
-    color: white;
-
+.achievement-hero p {
+    color: var(--text-light);
 }
 
 #club-achievements .card {
-
     min-height: 220px;
-
     display: flex;
-
     justify-content: center;
-
 }
 
 /* ===========================
-Spotlight
+   Spotlight
 =========================== */
 
 #spotlight img {
-
     width: 220px;
-
     height: 220px;
-
     object-fit: cover;
-
 }
 
 /* ===========================
-Player Table
+   Player Table
 =========================== */
 
 .table-scroll {
-
     max-height: 600px;
-
     overflow-y: auto;
-
 }
 
 .table-dark {
-
-    background: #03045E;
-
+    background: var(--primary);
 }
 
 .table tbody tr:hover {
-
-    background: var(--background);
-
+    background: var(--background-light);
 }
 
 .table {
-
-    background: white;
-
-    border-radius: 12px;
-
+    background: #ffffff;
+    border-radius: var(--radius-md);
     overflow: hidden;
-
 }
 
 .table td {
-
     vertical-align: middle;
-
 }
 
 /* ===========================
-Summary
+   Summary
 =========================== */
 
 .table-primary {
-
-    background: var(--light-cyan);
-
+    background: var(--accent-light);
 }
