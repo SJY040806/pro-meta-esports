@@ -1536,8 +1536,8 @@ a {
         font-size: 11px;
         line-height: 1.6;
     }
-    
-    input[type="text"] {
+
+    .rankingSearch {
         font-size: 6px;
         padding: 6px 10px;
     }
