@@ -1,0 +1,432 @@
+/* ============================================================
+   PRO META E-SPORTS — ranking-players.css
+   Extends the shared css/style.css. Load this AFTER style.css.
+   Covers components that don't exist in the shared stylesheet:
+   filter/tab pills, the player card grid, and the ranking table
+   card. Everything below reuses style.css's CSS variables
+   (--primary, --secondary, --accent, --shadow-*, --radius-*, etc.)
+   so it stays visually consistent with the rest of the site.
+   ============================================================ */
+
+:root {
+  /* Rank #1/#2/#3 highlight colours — not part of the shared
+     palette, added here purely for ranking-table legibility. */
+  --gold: #f2c14e;
+  --silver: #c7ccd1;
+  --bronze: #cd8032;
+}
+
+/* ============================================================
+   PAGE HERO — reuses the same visual language as .about-hero
+   (dark gradient banner) so Players/Rankings match the rest
+   of the site's inner pages.
+   ============================================================ */
+.page-hero {
+  min-height: 38vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(3, 4, 94, 0.92), rgba(0, 119, 182, 0.88));
+  padding: var(--section-padding) 0 60px;
+  text-align: center;
+}
+
+.page-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-hero .section-label {
+  color: var(--accent-light);
+}
+
+.page-hero h1 {
+  color: #ffffff;
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.page-hero p:not(.section-label) {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-hero .demo-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================
+   CONTENT SECTION WRAPPER
+   ============================================================ */
+.content-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+/* ============================================================
+   FILTER / TAB PILLS — used for game tabs, ranking-type toggle,
+   and the player-profile game filter. Matches .btn-outline-custom's
+   language but as a pill toggle group.
+   ============================================================ */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+  border: 2px solid var(--secondary);
+  background-color: #ffffff;
+  color: var(--secondary);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 9px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background-color: rgba(0, 119, 182, 0.08);
+}
+
+.filter-btn.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.filter-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Search + sort controls (Ranking page) */
+.ranking-controls {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ranking-controls input[type="search"] {
+  border: 1.5px solid rgba(3, 4, 94, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 9px 16px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  min-width: 240px;
+}
+
+.ranking-controls select {
+  border: 1.5px solid rgba(3, 4, 94, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+}
+
+/* ============================================================
+   PLAYER CARD GRID (players.html / player.js)
+   Same visual language as .game-card: white card, shadow, hover-lift.
+   ============================================================ */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.player-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(3, 4, 94, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.player-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.player-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.game-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.game-pill-cs {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.game-pill-valorant {
+  border-color: #e63946;
+  color: #e63946;
+}
+
+.game-pill-mlbb {
+  border-color: #c98a1f;
+  color: #c98a1f;
+}
+
+.game-pill-lol {
+  border-color: #4a90e2;
+  /* LoL blue */
+  color: #4a90e2;
+}
+
+.game-pill-apex {
+  border-color: #e74c3c;
+  /* Apex red */
+  color: #e74c3c;
+}
+
+
+.player-region {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.player-photo {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin: 4px auto 14px;
+  display: block;
+  background-color: var(--background-light);
+}
+
+.player-name {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.player-team {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.player-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.player-stats .stat-value {
+  display: block;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 15px;
+}
+
+.player-stats .stat-label {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.achievement-tag {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: rgba(242, 193, 78, 0.15);
+  color: #a87c1f;
+  border: 1px solid rgba(242, 193, 78, 0.5);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ============================================================
+   RANKING TABLE CARD (rankings.html / ranking.js)
+   Same visual language as .tournament-card: dark header bar,
+   white body, shadow.
+   ============================================================ */
+.ranking-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid rgba(3, 4, 94, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ranking-table thead th {
+  background-color: var(--primary);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 14px 12px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.ranking-table thead th.sortable:hover {
+  color: var(--accent-light);
+}
+
+.ranking-table thead th .sort-arrow {
+  opacity: 0.7;
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+.ranking-table tbody tr {
+  border-bottom: 1px solid rgba(3, 4, 94, 0.08);
+  transition: background 0.15s ease;
+}
+
+.ranking-table tbody tr:hover {
+  background-color: var(--background-light);
+}
+
+.ranking-table tbody td {
+  padding: 12px;
+  text-align: center;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.ranking-table tbody td.name-cell {
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: rgba(3, 4, 94, 0.08);
+  color: var(--primary);
+}
+
+.rank-badge.gold {
+  background-color: var(--gold);
+  color: var(--primary);
+}
+
+.rank-badge.silver {
+  background-color: var(--silver);
+  color: var(--primary);
+}
+
+.rank-badge.bronze {
+  background-color: var(--bronze);
+  color: #ffffff;
+}
+
+.empty-state,
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text-muted);
+}
+
+.error-state {
+  color: #c0392b;
+}
+
+/* Mobile: convert table rows into stacked cards */
+@media (max-width: 767.98px) {
+  .ranking-table thead {
+    display: none;
+  }
+
+  .ranking-table,
+  .ranking-table tbody,
+  .ranking-table tr,
+  .ranking-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .ranking-table tbody tr {
+    border: 1px solid rgba(3, 4, 94, 0.08);
+    border-radius: var(--radius-sm);
+    margin: 12px;
+    padding: 10px 14px;
+  }
+
+  .ranking-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    padding: 6px 0;
+    border-bottom: 1px dashed rgba(3, 4, 94, 0.08);
+  }
+
+  .ranking-table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  .ranking-table tbody td::before {
+    content: attr(data-label);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .ranking-table tbody td.name-cell {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .ranking-table thead th,
+  .ranking-table tbody td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
