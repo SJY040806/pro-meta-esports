@@ -21,6 +21,10 @@
     background-color: #f8fafc;
 }
 
+.membership-hero .section-label {
+    color: var(--accent-light);
+}
+
 /* ===========================
    Benefits Cards & Image Alignment
 =========================== */
