@@ -1,0 +1,1135 @@
+/* =========================
+   EVENT SCHEDULE PAGE
+   ========================= */
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.schedule-hero {
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 180, 216, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--deep-blue),
+            var(--secondary)
+        );
+
+    padding: var(--section-padding) 0;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.schedule-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background-color: var(--accent);
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: 0.16;
+
+    top: -160px;
+    left: -100px;
+}
+
+.schedule-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 1px solid rgba(72, 202, 228, 0.18);
+
+    transform: rotate(45deg);
+
+    right: 8%;
+    bottom: -120px;
+}
+
+.schedule-hero-content {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.schedule-hero .section-label {
+    color: var(--accent-light);
+}
+
+.schedule-hero h1 {
+    color: #ffffff;
+
+    font-size: clamp(38px, 6vw, 58px);
+
+    font-weight: 700;
+
+    margin-bottom: 24px;
+}
+
+.schedule-hero p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   NEXT EVENT
+   ========================= */
+
+.next-event-section {
+    padding: 70px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--background-light),
+            #ffffff
+        );
+}
+
+.next-event-card {
+    display: flex;
+
+    min-height: 360px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--deep-blue)
+        );
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-lg);
+
+    position: relative;
+}
+
+
+/* Accent */
+
+.next-event-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background-color: var(--accent);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.2;
+
+    top: -120px;
+    right: 180px;
+}
+
+.next-event-main {
+    flex: 1;
+
+    padding: 48px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.next-event-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--accent-light);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: var(--accent);
+
+    box-shadow: 0 0 12px var(--accent);
+
+    animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+}
+
+.next-event-game {
+    color: var(--accent-light);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.next-event-main h2 {
+    color: #ffffff;
+
+    font-family: "Lora", serif;
+
+    font-size: clamp(30px, 4vw, 42px);
+
+    line-height: 1.2;
+
+    margin-bottom: 16px;
+}
+
+.next-event-description {
+    color: rgba(255, 255, 255, 0.78);
+
+    max-width: 620px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 24px;
+}
+
+.next-event-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+.next-event-info span {
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 12px;
+
+    padding: 7px 11px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 6px;
+}
+
+
+/* Next Event Visual */
+
+.next-event-visual {
+    width: 32%;
+
+    min-width: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 180, 216, 0.22),
+            rgba(3, 4, 94, 0.4)
+        );
+
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.next-event-glow {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    background-color: var(--accent);
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.25;
+}
+
+.next-event-game-logo {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(72, 202, 228, 0.6);
+
+    border-radius: 24px;
+
+    color: #ffffff;
+
+    font-family: "Lora", serif;
+
+    font-size: 68px;
+
+    font-weight: 700;
+
+    background-color: rgba(3, 4, 94, 0.35);
+
+    box-shadow:
+        0 0 40px rgba(0, 180, 216, 0.25);
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.next-event-tag {
+    margin-top: 18px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background-color: var(--accent);
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   SCHEDULE SECTION
+   ========================= */
+
+.schedule-section {
+    padding: var(--section-padding) 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7fcfd 45%,
+            var(--background-light) 100%
+        );
+
+    position: relative;
+}
+
+.schedule-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(3, 4, 94, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(3, 4, 94, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   MONTH
+   ========================= */
+
+.schedule-month {
+    margin-top: 65px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.month-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 32px;
+
+    padding: 16px 20px;
+
+    background-color: #ffffff;
+
+    border-radius: var(--radius-md);
+
+    border-left: 5px solid var(--accent);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.month-number {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--deep-blue)
+        );
+
+    border-radius: 10px;
+
+    color: var(--accent-light);
+
+    font-family: "Lora", serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.month-heading small {
+    color: var(--secondary);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.month-heading h2 {
+    color: var(--primary);
+
+    font-size: 27px;
+
+    margin: 2px 0 0;
+}
+
+
+/* =========================
+   TIMELINE
+   ========================= */
+
+.timeline {
+    position: relative;
+
+    padding-left: 65px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--accent),
+            rgba(0, 119, 182, 0.15)
+        );
+}
+
+
+/* =========================
+   TIMELINE ITEM
+   ========================= */
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 28px;
+}
+
+.timeline-marker {
+    position: absolute;
+
+    left: -65px;
+
+    top: 25px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+
+    border: 3px solid var(--background-light);
+
+    border-radius: 50%;
+
+    color: var(--accent-light);
+
+    font-family: "Lora", serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 180, 216, 0.15);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   EVENT CARD
+   ========================= */
+
+.event-card {
+    background-color: #ffffff;
+
+    border: 1px solid rgba(3, 4, 94, 0.08);
+
+    border-radius: var(--radius-md);
+
+    padding: 26px 28px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.event-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--accent),
+            var(--secondary)
+        );
+}
+
+.event-card:hover {
+    transform: translateX(5px) translateY(-3px);
+
+    box-shadow: var(--shadow-lg);
+
+    border-color: rgba(0, 180, 216, 0.25);
+}
+
+
+/* Event variation */
+
+.community-event::before {
+    background:
+        linear-gradient(
+            180deg,
+            var(--accent-light),
+            var(--secondary)
+        );
+}
+
+.training-event::before {
+    background:
+        linear-gradient(
+            180deg,
+            var(--secondary),
+            var(--deep-blue)
+        );
+}
+
+.scrimmage-event::before {
+    background:
+        linear-gradient(
+            180deg,
+            #0077B6,
+            #03045E
+        );
+}
+
+.workshop-event::before {
+    background:
+        linear-gradient(
+            180deg,
+            #48CAE4,
+            #0077B6
+        );
+}
+
+.tryout-event::before {
+    background:
+        linear-gradient(
+            180deg,
+            #00B4D8,
+            #023E8A
+        );
+}
+
+
+/* =========================
+   EVENT CARD TOP
+   ========================= */
+
+.event-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.event-type {
+    display: inline-block;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* Event Types */
+
+.event-type.tournament {
+    background-color: rgba(0, 180, 216, 0.15);
+
+    color: var(--secondary);
+}
+
+.event-type.community {
+    background-color: rgba(72, 202, 228, 0.18);
+
+    color: var(--secondary);
+}
+
+.event-type.scrimmage {
+    background-color: rgba(3, 4, 94, 0.1);
+
+    color: var(--primary);
+}
+
+.event-type.tryout {
+    background-color: rgba(0, 119, 182, 0.12);
+
+    color: var(--secondary);
+}
+
+.event-type.training {
+    background-color: rgba(2, 62, 138, 0.12);
+
+    color: var(--deep-blue);
+}
+
+.event-type.workshop {
+    background-color: rgba(0, 180, 216, 0.12);
+
+    color: var(--secondary);
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.event-status {
+    color: var(--secondary);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background-color: rgba(0, 119, 182, 0.08);
+}
+
+.event-status.featured {
+    background-color: rgba(0, 180, 216, 0.15);
+
+    color: var(--secondary);
+}
+
+
+/* =========================
+   EVENT GAME
+   ========================= */
+
+.event-game {
+    color: var(--secondary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   EVENT TEXT
+   ========================= */
+
+.event-card h3 {
+    color: var(--primary);
+
+    font-family: "Lora", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.event-description {
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 800px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   EVENT INFO
+   ========================= */
+
+.event-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px 10px;
+}
+
+.event-info span {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    padding: 6px 10px;
+
+    background-color: #f6fafb;
+
+    border: 1px solid rgba(3, 4, 94, 0.05);
+
+    border-radius: 6px;
+}
+
+
+/* =========================
+   FEATURED EVENT
+   ========================= */
+
+.featured-event .event-card {
+    border: 1px solid rgba(0, 180, 216, 0.3);
+
+    box-shadow:
+        0 12px 30px rgba(0, 119, 182, 0.1);
+}
+
+.featured-event .timeline-marker {
+    background:
+        linear-gradient(
+            135deg,
+            var(--secondary),
+            var(--primary)
+        );
+
+    box-shadow:
+        0 0 0 4px rgba(0, 180, 216, 0.15),
+        0 0 20px rgba(0, 180, 216, 0.3);
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+.schedule-cta {
+    padding: var(--section-padding) 0;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(0, 180, 216, 0.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.schedule-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background-color: var(--accent);
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: 0.2;
+
+    top: -180px;
+    right: -100px;
+}
+
+.schedule-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background-color: var(--accent-light);
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.15;
+
+    bottom: -170px;
+    left: -100px;
+}
+
+.schedule-cta-content {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+}
+
+.schedule-cta .section-label {
+    color: var(--accent-light);
+}
+
+.schedule-cta h2 {
+    color: #ffffff;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.schedule-cta p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 767px) {
+
+
+    /* ---------- HERO ---------- */
+
+    .schedule-hero {
+        min-height: auto;
+
+        padding: 70px 20px;
+    }
+
+    .schedule-hero h1 {
+        font-size: clamp(38px, 11vw, 52px);
+    }
+
+    .schedule-hero p:not(.section-label) {
+        font-size: 15px;
+    }
+
+
+    /* ---------- NEXT EVENT ---------- */
+
+    .next-event-section {
+        padding: 55px 0;
+    }
+
+    .next-event-card {
+        flex-direction: column;
+    }
+
+    .next-event-main {
+        padding: 32px 24px;
+    }
+
+    .next-event-main h2 {
+        font-size: 30px;
+    }
+
+    .next-event-description {
+        font-size: 13px;
+    }
+
+    .next-event-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .next-event-visual {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 220px;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    /* ---------- SCHEDULE ---------- */
+
+    .schedule-section {
+        padding: 65px 0;
+    }
+
+    .schedule-month {
+        margin-top: 45px;
+    }
+
+
+    /* ---------- MONTH ---------- */
+
+    .month-heading {
+        padding: 12px 15px;
+
+        gap: 11px;
+    }
+
+    .month-number {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+    .month-heading h2 {
+        font-size: 22px;
+    }
+
+
+    /* ---------- TIMELINE ---------- */
+
+    .timeline {
+        padding-left: 48px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: -48px;
+
+        top: 20px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 11px;
+    }
+
+
+    /* ---------- EVENT CARD ---------- */
+
+    .event-card {
+        padding: 21px 20px;
+    }
+
+    .event-card h3 {
+        font-size: 19px;
+    }
+
+    .event-description {
+        font-size: 13px;
+    }
+
+
+    /* ---------- EVENT INFO ---------- */
+
+    .event-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+    }
+
+    .event-info span {
+        font-size: 11px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .schedule-cta {
+        padding: 65px 0;
+    }
+
+    .schedule-cta h2 {
+        font-size: 32px;
+    }
+
+    .schedule-cta p:not(.section-label) {
+        font-size: 14px;
+    }
+
+}
