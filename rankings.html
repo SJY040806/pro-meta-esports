@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rankings | Pro Meta E-Sports</title>
+
+    <link rel="icon" type="image/png" href="images/logo/pm-logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Global CSS (shared site-wide) -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Player Profile / Ranking specific CSS (extends style.css) -->
+    <link rel="stylesheet" href="css/ranking-players.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         NAVBAR — copied exactly from index.html; "Rankings" active here
+         ============================================================ -->
+    <nav class="navbar navbar-expand-lg site-navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo/pm-logo.png" alt="Pro Meta E-Sports">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tournaments.html">Tournaments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Event Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="players.html">Players</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rankings.html">Rankings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <header class="page-hero">
+        <div class="container page-hero-content">
+            <p class="section-label">PRO META E-SPORTS</p>
+            <h1>Competitive Ranking</h1>
+            <p>Track team and player standings across Counter-Strike, Valorant, and Mobile Legends.</p>
+            <p class="demo-note">Demo data for coursework purposes — figures are illustrative and not verified live
+                statistics.</p>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+
+            <!-- Game selection tabs -->
+            <div class="filter-tabs game-tabs" role="tablist" aria-label="Select a game">
+                <button class="filter-btn game-tab-btn active" data-game="valorant" role="tab"
+                    aria-selected="true">Valorant</button>
+                <button class="filter-btn game-tab-btn" data-game="mlbb" role="tab" aria-selected="false">Mobile
+                    Legends</button>
+                <button class="filter-btn game-tab-btn" data-game="cs" role="tab"
+                    aria-selected="false">Counter-Strike</button>
+                <button class="filter-btn game-tab-btn" data-game="lol" role="tab" aria-selected="false">League of
+                    Legends</button>
+                <button class="filter-btn game-tab-btn" data-game="apex" role="tab" aria-selected="false">Apex
+                    Legends</button>
+
+            </div>
+
+            <!-- Ranking type toggle -->
+            <div class="filter-tabs rank-type-tabs" role="tablist" aria-label="Choose ranking type">
+                <button class="filter-btn rank-type-btn active" data-type="player" role="tab"
+                    aria-selected="true">Player Ranking</button>
+                <button class="filter-btn rank-type-btn" data-type="team" role="tab" aria-selected="false">Team
+                    Ranking</button>
+            </div>
+
+            <!-- Search + sort controls -->
+            <div class="ranking-controls">
+                <input type="search" id="rankingSearch" placeholder="Search player or team"
+                    aria-label="Search ranking">
+                <div class="d-flex align-items-center gap-2">
+                    <label for="rankingSort" class="small mb-0" style="color:var(--text-muted)">Sort by</label>
+                    <select id="rankingSort" aria-label="Sort ranking by">
+                        <option value="rank">Rank</option>
+                        <option value="points">Points</option>
+                        <option value="winRate">Win Rate</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Ranking table / mobile card panel -->
+            <div class="ranking-card">
+                <div id="rankingStatus" class="loading-state">Loading ranking data...</div>
+                <table class="ranking-table d-none" id="rankingTable">
+                    <thead id="rankingHead"></thead>
+                    <tbody id="rankingBody"></tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER — copied exactly from index.html
+         ============================================================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        <img src="images/logo/pm-logo.png" alt="Pro Meta E-Sports">
+                    </a>
+                    <p class="footer-description">
+                        A competitive gaming community built for players who are passionate about
+                        competition, teamwork, and the world of e-sports.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-lg-2">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="schedule.html">Event Schedule</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-lg-2">
+                    <h3 class="footer-title">Community</h3>
+                    <ul class="footer-links">
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="rankings.html">Rankings</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 class="footer-title">Visit Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <strong>Location</strong>
+                            <span>Kampar, Perak, Malaysia</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pro Meta E-Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (needed for the AJAX calls in api.js/ranking.js) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap bundle (for the navbar toggler) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Data layer (must load before ranking.js, which calls PM_API) -->
+    <script src="js/api.js"></script>
+    <!-- Ranking logic -->
+    <script src="js/ranking.js"></script>
+
+</body>
+
+</html>
