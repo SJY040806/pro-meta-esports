@@ -1,76 +1,206 @@
 /* ===========================
-   Hero
+   Hero Section
 =========================== */
-
 .achievement-hero {
-    min-height: 420px;
+    min-height: 50vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(rgba(3, 4, 94, .75), rgba(2, 62, 138, .75)),
-        url("../assets/images/achievement-banner.jpg");
-
+    background: linear-gradient(135deg, rgba(3, 4, 94, 0.94), rgba(0, 119, 182, 0.88));
     background-size: cover;
     background-position: center;
+    padding: var(--section-padding, 60px) 0;
+    color: var(--text-light, #ffffff);
 }
 
 .achievement-hero h1 {
-    color: var(--text-light);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
 }
 
-.achievement-hero p {
-    color: var(--text-light);
-}
-
+/* ===========================
+   Club Achievements Cards
+=========================== */
 #club-achievements .card {
-    min-height: 220px;
-    display: flex;
-    justify-content: center;
-}
-
-/* ===========================
-   Spotlight
-=========================== */
-
-#spotlight img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-}
-
-/* ===========================
-   Player Table
-=========================== */
-
-.table-scroll {
-    max-height: 600px;
-    overflow-y: auto;
-}
-
-.table-dark {
-    background: var(--primary);
-}
-
-.table tbody tr:hover {
-    background: var(--background-light);
-}
-
-.table {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(3, 4, 94, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #ffffff;
-    border-radius: var(--radius-md);
+}
+
+#club-achievements .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(3, 4, 94, 0.15);
+}
+
+#club-achievements .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* =========================
+   Achievement Dashboard (Single Full-Width Rows)
+========================= */
+.achievement-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(3, 4, 94, 0.1);
+    border: 2px solid rgba(0, 180, 216, 0.12);
+    transition: all 0.35s ease;
     overflow: hidden;
 }
 
-.table td {
-    vertical-align: middle;
+.achievement-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cyan, #00b4d8);
+    box-shadow: 0 20px 40px rgba(3, 4, 94, 0.16), 0 0 20px rgba(0, 180, 216, 0.15);
+}
+
+.achievement-badge {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #0077b6;
+    background: rgba(0, 180, 216, 0.12);
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.horizontal-card .achievement-card-body {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* MVP Image Container (Border Removed) */
+.achievement-image {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+    /* Border removed */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.achievement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Club Logo Container */
+.club-logo-wrapper {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.club-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.achievement-details h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #03045e;
+    margin-bottom: 4px;
+}
+
+.game-subtitle {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 12px;
+}
+
+.achievement-stats-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stat-pill {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: #f0f4f8;
+    color: #03045e;
+}
+
+.highlight-pill {
+    background: #03045e;
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .horizontal-card .achievement-card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .achievement-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .achievement-stats-group {
+        justify-content: center;
+    }
 }
 
 /* ===========================
-   Summary
+   Player Table Styling
 =========================== */
+.custom-filter-select {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+}
 
-.table-primary {
-    background: var(--accent-light);
+.table-scroll {
+    max-height: 550px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+}
+
+.custom-achievement-table thead {
+    position: sticky;
+    top: 0;
+    background: #03045e;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.custom-achievement-table th {
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.custom-achievement-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.custom-achievement-table tbody tr:hover {
+    background-color: #f8fafc;
 }
