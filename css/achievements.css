@@ -18,6 +18,10 @@
     margin-bottom: 15px;
 }
 
+.achievement-hero .section-label {
+    color: var(--accent-light);
+}
+
 /* ===========================
    Club Achievements Cards
 =========================== */
