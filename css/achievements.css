@@ -151,7 +151,7 @@
 @media (max-width: 576px) {
     .horizontal-card .achievement-card-body {
         flex-direction: column;
-        text-center: center;
+        text-align: center;
     }
 
     .achievement-badge {
