@@ -10,10 +10,8 @@
     min-height: 55vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(
-        rgba(3, 4, 94, 0.92),
-        rgba(0, 119, 182, 0.88)
-    );
+    background: linear-gradient(rgba(3, 4, 94, 0.92),
+            rgba(0, 119, 182, 0.88));
     padding: var(--section-padding) 0;
 }
 
@@ -63,16 +61,48 @@
 
 
 /* =========================
+   TOURNAMENT CARD HIGHLIGHT
+   ========================= */
+
+/* Keep targeted tournament card away from the top edge */
+.tournament-card {
+    scroll-margin-top: 35vh;
+}
+
+.tournament-card:target {
+    animation: tournamentHighlight 2.5s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes tournamentHighlight {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
    TOURNAMENT CTA
    ========================= */
 
 .tournament-cta {
     padding: var(--section-padding) 0;
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
     position: relative;
     overflow: hidden;
 }

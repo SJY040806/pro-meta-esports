@@ -14,17 +14,13 @@
     align-items: center;
 
     background:
-        radial-gradient(
-            circle at 80% 20%,
+        radial-gradient(circle at 80% 20%,
             rgba(0, 180, 216, 0.25),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
+            transparent 35%),
+        linear-gradient(135deg,
             var(--primary),
             var(--deep-blue),
-            var(--secondary)
-        );
+            var(--secondary));
 
     padding: var(--section-padding) 0;
 
@@ -114,11 +110,9 @@
     padding: 70px 0;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             var(--background-light),
-            #ffffff
-        );
+            #ffffff);
 }
 
 .next-event-card {
@@ -127,11 +121,9 @@
     min-height: 360px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--primary),
-            var(--deep-blue)
-        );
+            var(--deep-blue));
 
     border-radius: 18px;
 
@@ -296,11 +288,9 @@
     align-items: center;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(0, 180, 216, 0.22),
-            rgba(3, 4, 94, 0.4)
-        );
+            rgba(3, 4, 94, 0.4));
 
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -337,14 +327,6 @@
 
     border-radius: 24px;
 
-    color: #ffffff;
-
-    font-family: "Lora", serif;
-
-    font-size: 68px;
-
-    font-weight: 700;
-
     background-color: rgba(3, 4, 94, 0.35);
 
     box-shadow:
@@ -353,6 +335,17 @@
     position: relative;
 
     z-index: 1;
+
+    overflow: hidden;
+}
+
+.next-event-game-logo img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 .next-event-tag {
@@ -386,12 +379,10 @@
     padding: var(--section-padding) 0;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #ffffff 0%,
             #f7fcfd 45%,
-            var(--background-light) 100%
-        );
+            var(--background-light) 100%);
 
     position: relative;
 }
@@ -404,15 +395,11 @@
     inset: 0;
 
     background-image:
-        linear-gradient(
+        linear-gradient(rgba(3, 4, 94, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
             rgba(3, 4, 94, 0.025) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(3, 4, 94, 0.025) 1px,
-            transparent 1px
-        );
+            transparent 1px);
 
     background-size: 50px 50px;
 
@@ -462,11 +449,9 @@
     justify-content: center;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--primary),
-            var(--deep-blue)
-        );
+            var(--deep-blue));
 
     border-radius: 10px;
 
@@ -521,11 +506,9 @@
     width: 2px;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             var(--accent),
-            rgba(0, 119, 182, 0.15)
-        );
+            rgba(0, 119, 182, 0.15));
 }
 
 
@@ -612,11 +595,9 @@
     width: 4px;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             var(--accent),
-            var(--secondary)
-        );
+            var(--secondary));
 }
 
 .event-card:hover {
@@ -632,47 +613,37 @@
 
 .community-event::before {
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             var(--accent-light),
-            var(--secondary)
-        );
+            var(--secondary));
 }
 
 .training-event::before {
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             var(--secondary),
-            var(--deep-blue)
-        );
+            var(--deep-blue));
 }
 
 .scrimmage-event::before {
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #0077B6,
-            #03045E
-        );
+            #03045E);
 }
 
 .workshop-event::before {
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #48CAE4,
-            #0077B6
-        );
+            #0077B6);
 }
 
 .tryout-event::before {
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #00B4D8,
-            #023E8A
-        );
+            #023E8A);
 }
 
 
@@ -859,11 +830,9 @@
 
 .featured-event .timeline-marker {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--secondary),
-            var(--primary)
-        );
+            var(--primary));
 
     box-shadow:
         0 0 0 4px rgba(0, 180, 216, 0.15),
@@ -879,16 +848,12 @@
     padding: var(--section-padding) 0;
 
     background:
-        radial-gradient(
-            circle at 85% 20%,
+        radial-gradient(circle at 85% 20%,
             rgba(0, 180, 216, 0.25),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
+            transparent 30%),
+        linear-gradient(135deg,
             var(--primary),
-            var(--secondary)
-        );
+            var(--secondary));
 
     position: relative;
 

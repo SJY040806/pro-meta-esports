@@ -412,8 +412,18 @@ a {
 }
 
 .achievement-icon {
-    font-size: 36px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 18px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.achievement-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .achievement-year {
@@ -424,20 +434,6 @@ a {
     letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
-
-.achievement-card h3 {
-    color: var(--primary);
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.achievement-card p {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
 
 /* ---------- Purpose Card ---------- */
 
@@ -1376,7 +1372,8 @@ a {
     }
 
     .achievement-icon {
-        font-size: 30px;
+        width: 55px;
+        height: 55px;
         margin-bottom: 14px;
     }
 
