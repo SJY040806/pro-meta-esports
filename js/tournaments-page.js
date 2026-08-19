@@ -56,3 +56,25 @@ tournaments.forEach(tournament => {
         </div>
     `;
 });
+
+const params = new URLSearchParams(window.location.search);
+const eventId = params.get("event");
+
+if (eventId) {
+
+    const targetEvent = document.getElementById(eventId);
+
+    if (targetEvent) {
+
+        setTimeout(() => {
+
+            targetEvent.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }, 100);
+
+    }
+
+}
