@@ -1,60 +1,115 @@
 /* ===========================
    Hero
 =========================== */
-
 .membership-hero {
-    min-height: 500px;
+    min-height: 50vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(rgba(3, 4, 94, .75), rgba(2, 62, 138, .75)),
-        url("../assets/images/membership-hero.jpg");
-
+    background: linear-gradient(135deg, rgba(3, 4, 94, 0.94), rgba(0, 119, 182, 0.88));
     background-size: cover;
     background-position: center;
+    padding: var(--section-padding, 60px) 0;
+    color: #ffffff;
 }
 
 .membership-hero h1 {
-    color: var(--text-light);
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-.membership-hero p {
-    color: var(--text-light);
-    max-width: 700px;
-    margin: auto;
-}
-
-/* ===========================
-   Benefits
-=========================== */
-
-.card h5 {
-    margin-top: 15px;
+.bg-light-custom {
+    background-color: #f8fafc;
 }
 
 /* ===========================
-   Registration
+   Benefits Cards & Image Alignment
 =========================== */
+.benefit-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(3, 4, 94, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+}
 
+.benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(3, 4, 94, 0.14);
+}
+
+.benefit-card .card-img-top {
+    height: 190px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.benefit-card h5 {
+    font-weight: 600;
+    color: #03045e;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   Registration Form
+=========================== */
 #join {
     background: #ffffff;
 }
 
-#join .card {
-    border-radius: 20px;
+.registration-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(3, 4, 94, 0.08);
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #334155;
+    margin-bottom: 6px;
 }
 
 .form-control,
 .form-select {
-    border-radius: var(--radius-sm);
-    padding: 12px;
+    border-radius: 10px;
+    padding: 11px 16px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--accent);
-    box-shadow: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+.btn-submit {
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: #0077b6;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #03045e;
+}
+
+/* Custom Image Focus Helpers */
+.benefit-card .card-img-top.img-focus-bottom {
+    object-position: center bottom !important;
+    /* Pulls image up, showing bottom content */
+}
+
+.benefit-card .card-img-top.img-focus-top {
+    object-position: center top !important;
+    /* Pulls image down, showing top content */
+}
+
+.benefit-card .card-img-top.img-focus-custom {
+    object-position: 50% 20% !important;
+    /* Pushes framing as far down as possible */
 }
