@@ -9,7 +9,6 @@ function validateRegistrationForm() {
     const membershipType = document.getElementById("membershipType").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
-    const terms = document.getElementById("terms").checked;
 
     if (fullName === "") {
         return "Please enter your full name.";
@@ -51,9 +50,7 @@ function validateRegistrationForm() {
         return "Passwords do not match.";
     }
 
-    if (!terms) {
-        return "Please agree to the Terms & Conditions.";
-    }
+
 
     return null;
 }
